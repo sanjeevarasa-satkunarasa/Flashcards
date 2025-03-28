@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flashcard App</title>
+  <link rel="stylesheet" href="/styles/styles.css">
+  <link rel="icon" type="image/x-icon" href="/media/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+  <div id="app">
+    <div id="header">
+      <h1>Learn quicker with flashcards</h1>
+      <h2>Use spaced repition to learn quicker and more effectively</h2>
+      <p>Check out our walkthrough video: <a href="/walkthrough.html">Video</a></p>
+      <button id="toggle-form-btn" onclick="toggleFlashcardForm()">Show Form</button>
+      <div id="flashcard-form">
+        <input type="text" id="question" placeholder="Enter question">
+        <input type="text" id="answer" placeholder="Enter answer">
+        <button onclick="addFlashcard()">Add Flashcard</button>
+      </div>
+    </div>
+
+    <div id="flashcards">
+      <h2>Flashcards</h2>
+      <ul id="flashcard-list">
+        <!-- Flashcards will be added here dynamically -->
+      </ul>
+    </div>
+  </div>
+
+  <script src="script/script.js"></script>
+</body>
+
+</html>

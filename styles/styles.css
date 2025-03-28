@@ -1,0 +1,260 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    background-color: #f4f4f4;
+}
+
+/* App Container */
+#app {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+    margin-top: 50px;
+}
+
+/* Header */
+#header {
+    position: fixed;
+    background-color: #f4f4f4;
+    width: 100%;
+    top: 0;
+    left: 0;
+    padding: 20px 0;
+    text-align: center;
+    z-index: 10;
+}
+
+#header h1 {
+    font-size: 2.5rem;
+    padding-bottom: 2vh;
+}
+
+/* Flashcard Form */
+#flashcard-form {
+    display: none;
+    width: 100%;
+    margin: 20px auto;
+}
+
+/* Input and Buttons */
+input,
+button {
+    padding: 8px;
+    margin: 10px;
+    width: 80%;
+    max-width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Flashcards */
+#flashcards {
+    margin-top: 100px;
+    padding: 0 20px;
+    width: 100%;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    background-color: #fff;
+    padding: 15px;
+    margin: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.question-text {
+    width: 20vw;
+}
+
+/* Buttons */
+li button {
+    background-color: red;
+    margin-left: 10px;
+}
+
+li button:hover {
+    background-color: #e60000;
+}
+
+.edit-btn {
+    background-color: #ff8c00;
+    margin-left: 10px;
+}
+
+.edit-btn:hover {
+    background-color: #e67e00;
+}
+
+.study-btn {
+    background-color: #007bff;
+    margin-left: 10px;
+}
+
+.study-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Difficulty Buttons */
+.difficulty-buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.difficulty-buttons button {
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+    width: 30%;
+    min-width: 80px;
+}
+
+.difficulty-buttons button.easy {
+    background-color: #28a745;
+}
+
+.difficulty-buttons button.medium {
+    background-color: #ffc107;
+}
+
+.difficulty-buttons button.hard {
+    background-color: #dc3545;
+}
+
+.difficulty-buttons button:hover {
+    opacity: 0.8;
+}
+
+/* Flashcard Answers */
+.flashcard-answer {
+    display: none;
+    margin-top: 10px;
+    color: #555;
+    font-style: italic;
+}
+
+.show-answer-btn {
+    background-color: #007bff;
+    color: white;
+    width: 10vw;
+    margin-top: -1vh;
+    border: none;
+    padding: 6px 12px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.show-answer-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Button Container */
+.button-container {
+    display: flex;
+    justify-content: flex-start;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.button-container button {
+    margin-left: 0;
+}
+
+.next-review {
+    font-weight: bold;
+    display: inline;
+    white-space: nowrap;
+}
+
+/* Walkthrough Section */
+#walkthrough {
+    display: block;
+}
+
+#walkthrough a {
+    float: left;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    #header h1 {
+        font-size: 2rem;
+    }
+
+    #flashcard-form {
+        width: 90%;
+        max-width: 350px;
+    }
+
+    button {
+        width: 90%;
+        max-width: 350px;
+    }
+
+    .difficulty-buttons button {
+        width: 45%;
+    }
+
+    li {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .button-container {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    #flashcards {
+        margin-top: 120px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .difficulty-buttons button {
+        width: 30%;
+    }
+
+    #flashcard-form {
+        width: 80%;
+    }
+}
