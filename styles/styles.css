@@ -202,7 +202,6 @@ li button:hover {
 .next-review {
     font-weight: bold;
     display: inline;
-    white-space: nowrap;
 }
 
 /* Walkthrough Section */

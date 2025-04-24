@@ -31,7 +31,6 @@ function resetReviewedToday() {
 // Toggle visibility of the flashcard form using display
 function toggleFlashcardForm() {
     let form = document.getElementById('flashcard-form');
-    let button = document.getElementById('toggle-form-btn');
 
     // Toggle between showing and hiding the form
     if (form.style.display === "none") {
@@ -86,7 +85,7 @@ function displayFlashcards() {
 }
 
 
-// Get current date (days since 1st of January 1970 (unix time))
+// Get current date (days since 1st of January 1970 (unix time) in milliseconds)
 function getCurrentDay() {
     return Math.floor(date.getTime() / (1000 * 60 * 60 * 24)); // W3Schools
 }
